@@ -27,7 +27,7 @@ const FinalCTA = () => {
           Ready to Build?
         </h2>
         <p className="font-inter text-xl text-secondary mb-8 animate-fade-in max-w-2xl mx-auto">
-          Join the select few who demand nothing but perfection. Let's discuss your next racing engine project.
+          Join those who demand precision.
         </p>
         <Button 
           onClick={handleContactClick}
