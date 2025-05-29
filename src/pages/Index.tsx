@@ -1,12 +1,25 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+
+import React from 'react';
+import Navigation from '@/components/Navigation';
+import HeroSection from '@/components/HeroSection';
+import EngineBuildPrograms from '@/components/EngineBuildPrograms';
+import CustomCNCComponents from '@/components/CustomCNCComponents';
+import TracksideSupport from '@/components/TracksideSupport';
+import PatentedParts from '@/components/PatentedParts';
+import RAndD from '@/components/RAndD';
+import FinalCTA from '@/components/FinalCTA';
 
 const Index = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-gray-600">Start building your amazing project here!</p>
-      </div>
+    <div className="min-h-screen">
+      <Navigation />
+      <HeroSection />
+      <EngineBuildPrograms />
+      <CustomCNCComponents />
+      <TracksideSupport />
+      <PatentedParts />
+      <RAndD />
+      <FinalCTA />
     </div>
   );
 };
