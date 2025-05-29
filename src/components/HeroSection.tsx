@@ -1,6 +1,5 @@
 
 import React from 'react';
-import { Button } from '@/components/ui/button';
 
 const HeroSection = () => {
   return (
@@ -24,11 +23,9 @@ const HeroSection = () => {
         <p className="font-inter text-xl md:text-2xl lg:text-3xl font-light mb-8 animate-fade-in opacity-90">
           Private-label power for 2–3 clients annually
         </p>
-        <Button 
-          className="bg-accent hover:bg-accent-hover text-white font-inter font-semibold text-lg px-8 py-4 rounded-lg transition-all duration-300 transform hover:scale-105 animate-fade-in"
-        >
+        <p className="font-inter text-lg md:text-xl font-medium animate-fade-in text-white/90">
           Reserve Your Spot
-        </Button>
+        </p>
       </div>
       
       {/* Scroll Indicator */}

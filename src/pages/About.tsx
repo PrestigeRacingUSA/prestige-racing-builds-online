@@ -37,10 +37,6 @@ const About = () => {
                     </li>
                     <li className="flex items-center space-x-3">
                       <div className="w-2 h-2 bg-accent rounded-full"></div>
-                      <span className="font-inter text-secondary">Exclusive partnerships with serious competitors</span>
-                    </li>
-                    <li className="flex items-center space-x-3">
-                      <div className="w-2 h-2 bg-accent rounded-full"></div>
                       <span className="font-inter text-secondary">Innovation through precision engineering</span>
                     </li>
                     <li className="flex items-center space-x-3">

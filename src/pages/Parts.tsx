@@ -2,8 +2,15 @@
 import React from 'react';
 import Navigation from '@/components/Navigation';
 import { Button } from '@/components/ui/button';
+import { useNavigate } from 'react-router-dom';
 
 const Parts = () => {
+  const navigate = useNavigate();
+
+  const handleContactClick = () => {
+    navigate('/contact');
+  };
+
   return (
     <div className="min-h-screen bg-white">
       <Navigation />
@@ -34,6 +41,7 @@ const Parts = () => {
                   Parts catalog coming soon. Please contact us for custom design inquiries.
                 </p>
                 <Button 
+                  onClick={handleContactClick}
                   className="bg-accent hover:bg-accent-hover text-white font-inter font-semibold px-8 py-3 transition-colors duration-200"
                 >
                   Contact Us for Custom Parts

@@ -16,10 +16,6 @@ const TracksideSupport = () => {
             <div className="space-y-4">
               <div className="flex items-center space-x-3">
                 <div className="w-2 h-2 bg-accent rounded-full"></div>
-                <span className="font-inter text-secondary">Real-time engine monitoring</span>
-              </div>
-              <div className="flex items-center space-x-3">
-                <div className="w-2 h-2 bg-accent rounded-full"></div>
                 <span className="font-inter text-secondary">Performance optimization</span>
               </div>
               <div className="flex items-center space-x-3">

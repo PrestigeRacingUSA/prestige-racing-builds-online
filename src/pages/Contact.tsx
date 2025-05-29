@@ -100,55 +100,55 @@ const Contact = () => {
                   Send Message
                 </Button>
               </form>
+              
+              {/* Contact Information */}
+              <div className="mt-12">
+                <h2 className="font-oswald font-semibold text-2xl text-primary mb-6">Get in touch</h2>
+                
+                <div className="space-y-6">
+                  <div className="flex items-start space-x-4">
+                    <div className="flex-shrink-0">
+                      <Mail className="w-6 h-6 text-accent mt-1" />
+                    </div>
+                    <div>
+                      <h3 className="font-inter font-medium text-primary">Email</h3>
+                      <p className="font-inter text-secondary">info@prestigeracingusa.com</p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-start space-x-4">
+                    <div className="flex-shrink-0">
+                      <Phone className="w-6 h-6 text-accent mt-1" />
+                    </div>
+                    <div>
+                      <h3 className="font-inter font-medium text-primary">Phone</h3>
+                      <p className="font-inter text-secondary">(555) 123-4567</p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-start space-x-4">
+                    <div className="flex-shrink-0">
+                      <Clock className="w-6 h-6 text-accent mt-1" />
+                    </div>
+                    <div>
+                      <h3 className="font-inter font-medium text-primary">Availability</h3>
+                      <p className="font-inter text-secondary">By appointment only</p>
+                      <p className="font-inter text-sm text-secondary/70 mt-1">
+                        Due to our exclusive approach, all consultations and shop visits are scheduled in advance to ensure dedicated attention to your project.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
 
-            {/* Contact Information */}
+            {/* Shop Image - Now positioned to show more of the image */}
             <div className="animate-fade-in">
-              <h2 className="font-oswald font-semibold text-2xl text-primary mb-6">Get in touch</h2>
-              
-              <div className="space-y-6">
-                <div className="flex items-start space-x-4">
-                  <div className="flex-shrink-0">
-                    <Mail className="w-6 h-6 text-accent mt-1" />
-                  </div>
-                  <div>
-                    <h3 className="font-inter font-medium text-primary">Email</h3>
-                    <p className="font-inter text-secondary">info@prestigeracingusa.com</p>
-                  </div>
-                </div>
-                
-                <div className="flex items-start space-x-4">
-                  <div className="flex-shrink-0">
-                    <Phone className="w-6 h-6 text-accent mt-1" />
-                  </div>
-                  <div>
-                    <h3 className="font-inter font-medium text-primary">Phone</h3>
-                    <p className="font-inter text-secondary">(555) 123-4567</p>
-                  </div>
-                </div>
-                
-                <div className="flex items-start space-x-4">
-                  <div className="flex-shrink-0">
-                    <Clock className="w-6 h-6 text-accent mt-1" />
-                  </div>
-                  <div>
-                    <h3 className="font-inter font-medium text-primary">Availability</h3>
-                    <p className="font-inter text-secondary">By appointment only</p>
-                    <p className="font-inter text-sm text-secondary/70 mt-1">
-                      Due to our exclusive approach, all consultations and shop visits are scheduled in advance to ensure dedicated attention to your project.
-                    </p>
-                  </div>
-                </div>
-              </div>
-              
-              {/* Shop Image */}
-              <div className="mt-8">
-                <img 
-                  src="/lovable-uploads/8bb860c1-fee1-4b2f-8ef3-d91ce5f48ad5.png"
-                  alt="Prestige Racing USA Shop"
-                  className="w-full h-48 object-cover rounded-lg shadow-lg"
-                />
-              </div>
+              <img 
+                src="/lovable-uploads/8bb860c1-fee1-4b2f-8ef3-d91ce5f48ad5.png"
+                alt="Prestige Racing USA Shop"
+                className="w-full h-auto object-cover rounded-lg shadow-lg"
+              />
             </div>
           </div>
         </div>
