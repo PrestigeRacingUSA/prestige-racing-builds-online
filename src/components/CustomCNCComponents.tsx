@@ -16,7 +16,7 @@ const CustomCNCComponents = () => {
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-20"
         style={{
-          backgroundImage: `url('/lovable-uploads/3d9d4025-82da-401d-ba34-71a1e948c9fa.png')`
+          backgroundImage: `url('/lovable-uploads/e815b922-5bd6-4bdb-8c0b-ae9fe9bfd82f.png')`
         }}
       />
       

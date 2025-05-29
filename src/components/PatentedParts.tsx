@@ -8,7 +8,7 @@ const PatentedParts = () => {
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: `url('/lovable-uploads/4b9a1a08-d8d9-4977-81c9-fd8e28307947.png')`
+          backgroundImage: `url('/lovable-uploads/d3265fec-42cb-4c1b-a508-8ca5b556b748.png')`
         }}
       />
       
