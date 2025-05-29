@@ -1,11 +1,10 @@
-
 import React from 'react';
 
 const EngineBuildPrograms = () => {
   const programs = [
     {
       title: "Block Prep",
-      image: "/lovable-uploads/3d9d4025-82da-401d-ba34-71a1e948c9fa.png",
+      image: "/lovable-uploads/7561f56b-65e5-4785-afd9-aa42f6544dac.png",
       description: "Precision machining and preparation of engine blocks for optimal performance."
     },
     {
@@ -15,7 +14,7 @@ const EngineBuildPrograms = () => {
     },
     {
       title: "Final Assembly",
-      image: "/lovable-uploads/2e8cd1a3-9664-4654-bc57-54ca4fec14c4.png",
+      image: "/lovable-uploads/3d9d4025-82da-401d-ba34-71a1e948c9fa.png",
       description: "Meticulous assembly with precision-torqued components and quality control."
     }
   ];

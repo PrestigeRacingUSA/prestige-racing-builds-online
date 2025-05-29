@@ -55,7 +55,7 @@ const About = () => {
             {/* Image */}
             <div className="animate-fade-in">
               <img 
-                src="/lovable-uploads/e372497e-d969-4393-93e3-061675d9c6bd.png"
+                src="/lovable-uploads/a6b89269-e235-47b8-bc3e-47428227c975.png"
                 alt="Prestige Racing USA Shop"
                 className="w-full h-auto rounded-lg shadow-lg"
               />

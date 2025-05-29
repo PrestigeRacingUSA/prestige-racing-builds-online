@@ -144,7 +144,7 @@ const Contact = () => {
               {/* Shop Image */}
               <div className="mt-8">
                 <img 
-                  src="/lovable-uploads/f091f177-02ed-42f1-8d00-0efb7c98b47c.png"
+                  src="/lovable-uploads/8bb860c1-fee1-4b2f-8ef3-d91ce5f48ad5.png"
                   alt="Prestige Racing USA Shop"
                   className="w-full h-48 object-cover rounded-lg shadow-lg"
                 />
