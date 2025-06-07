@@ -21,7 +21,7 @@ const About = () => {
             <div className="animate-slide-in">
               <div className="space-y-6">
                 <p className="font-inter text-lg text-secondary leading-relaxed">
-                  Prestige Racing USA represents the pinnacle of small-batch racing engine construction. Founded on the principle that true performance demands uncompromising attention to detail, we limit our production to just 2-3 clients annually, ensuring each engine receives the meticulous care and precision it deserves.
+                  Our founder has spent two decades machining and building engines. He has dedicated his career to mastering manufacturing, engineering, and engine physics. He has built some of the fastest Hondas and Nissans in Arizona, with many former customers still racing his engines today. Drawing on a deep understanding of Japanese manufacturers' design philosophy, he has designed, patented and manufactured performance parts for both suspension and engine components.
                 </p>
                 
                 <p className="font-inter text-lg text-secondary leading-relaxed">
