@@ -12,8 +12,12 @@ import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
 
-// Use basename for GitHub Pages deployment
-const basename = import.meta.env.BASE_URL !== '/' ? import.meta.env.BASE_URL : undefined;
+// For GitHub Pages, we need the correct base path
+const basename = import.meta.env.PROD ? '/prestigeracingusa' : undefined;
+
+console.log('App loading, basename:', basename);
+console.log('Environment:', import.meta.env.MODE);
+console.log('Base URL:', import.meta.env.BASE_URL);
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
@@ -26,7 +30,6 @@ const App = () => (
           <Route path="/parts" element={<Parts />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
