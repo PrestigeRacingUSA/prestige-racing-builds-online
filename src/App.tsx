@@ -12,29 +12,36 @@ import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
 
-// For GitHub Pages, we need the correct base path
-const basename = import.meta.env.BASE_URL !== '/' ? import.meta.env.BASE_URL.replace(/\/$/, '') : undefined;
+// Simplified basename logic
+const basename = import.meta.env.MODE === 'production' ? '/prestigeracingusa' : undefined;
 
-console.log('App loading, basename:', basename);
-console.log('Environment:', import.meta.env.MODE);
-console.log('Base URL:', import.meta.env.BASE_URL);
+console.log('App loading with:', {
+  basename,
+  mode: import.meta.env.MODE,
+  baseUrl: import.meta.env.BASE_URL,
+  prod: import.meta.env.PROD
+});
 
-const App = () => (
-  <QueryClientProvider client={queryClient}>
-    <TooltipProvider>
-      <Toaster />
-      <Sonner />
-      <BrowserRouter basename={basename}>
-        <Routes>
-          <Route path="/" element={<Index />} />
-          <Route path="/parts" element={<Parts />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-      </BrowserRouter>
-    </TooltipProvider>
-  </QueryClientProvider>
-);
+const App = () => {
+  console.log('App component rendering');
+  
+  return (
+    <QueryClientProvider client={queryClient}>
+      <TooltipProvider>
+        <Toaster />
+        <Sonner />
+        <BrowserRouter basename={basename}>
+          <Routes>
+            <Route path="/" element={<Index />} />
+            <Route path="/parts" element={<Parts />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </BrowserRouter>
+      </TooltipProvider>
+    </QueryClientProvider>
+  );
+};
 
 export default App;
