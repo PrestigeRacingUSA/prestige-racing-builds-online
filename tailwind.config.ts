@@ -1,22 +1,35 @@
 import type { Config } from "tailwindcss";
 
+/**
+ * Tailwind configuration for Prestige Racing USA.
+ * – Restores ShadCN colour tokens (`border`, `ring`, …).
+ * – Adds app-specific brand colours (`primary`, `accent`, …).
+ * – Safelists JIT-purged utilities like `border-border`.
+ */
 const config: Config = {
   darkMode: ["class"],
 
-  // 1️⃣  Files Tailwind should scan for class names
+  /* ---------------------------------------------------------------------- */
+  /*  Files Tailwind should scan                                             */
+  /* ---------------------------------------------------------------------- */
   content: [
     "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
+    "./src/**/*.{js,ts,jsx,tsx,mdx}",
   ],
 
-  // 2️⃣  Utilities that MUST survive PurgeCSS
+  /* ---------------------------------------------------------------------- */
+  /*  Always-keep utilities ShadCN applies in CSS (not visible to the JIT)  */
+  /* ---------------------------------------------------------------------- */
   safelist: [
+    // ShadCN core
+    "border-border",
+    "bg-background",
+    "text-foreground",
+    "ring-ring",
+    "ring-offset-background",
+    // Brand-specific
     "text-primary",
     "bg-primary",
-    "text-primary-foreground",
-    "bg-primary/95",
-    "text-secondary",
-    "bg-secondary",
     "text-accent",
     "bg-accent",
     "hover:bg-accent-hover",
@@ -24,6 +37,9 @@ const config: Config = {
     "bg-muted",
   ],
 
+  /* ---------------------------------------------------------------------- */
+  /*  Theme                                                                  */
+  /* ---------------------------------------------------------------------- */
   theme: {
     container: {
       center: true,
@@ -38,11 +54,16 @@ const config: Config = {
         inter: ["Inter", "sans-serif"],
       },
 
-      /* ---------- Custom colour palette ---------- */
+      /* ---------- Core design-system tokens ---------- */
       colors: {
-        background: "#FFFFFF",
-        foreground: "#153E7A",
+        /* ShadCN fundamentals (stay in HSL so CSS variables keep working) */
+        border: "hsl(var(--border))",
+        input: "hsl(var(--input))",
+        ring: "hsl(var(--ring))",
+        background: "hsl(var(--background, 0 0% 100%))",
+        foreground: "hsl(var(--foreground, 219 64% 27%))",
 
+        /* App-specific brand palette */
         primary: {
           DEFAULT: "#153E7A",
           foreground: "#FFFFFF",
@@ -60,9 +81,33 @@ const config: Config = {
           DEFAULT: "#F4F4F4",
           foreground: "#333333",
         },
+
+        /* Optional tokens used by future ShadCN components */
+        destructive: {
+          DEFAULT: "hsl(var(--destructive))",
+          foreground: "hsl(var(--destructive-foreground))",
+        },
+        popover: {
+          DEFAULT: "hsl(var(--popover))",
+          foreground: "hsl(var(--popover-foreground))",
+        },
+        card: {
+          DEFAULT: "hsl(var(--card))",
+          foreground: "hsl(var(--card-foreground))",
+        },
+        sidebar: {
+          DEFAULT: "hsl(var(--sidebar-background))",
+          foreground: "hsl(var(--sidebar-foreground))",
+          primary: "hsl(var(--sidebar-primary))",
+          "primary-foreground": "hsl(var(--sidebar-primary-foreground))",
+          accent: "hsl(var(--sidebar-accent))",
+          "accent-foreground": "hsl(var(--sidebar-accent-foreground))",
+          border: "hsl(var(--sidebar-border))",
+          ring: "hsl(var(--sidebar-ring))",
+        },
       },
 
-      /* ---------- Gradients & images ---------- */
+      /* ---------- Visual effects ---------- */
       backgroundImage: {
         "hero-gradient":
           "linear-gradient(135deg, rgba(21,62,122,0.8) 0%, rgba(217,46,48,0.6) 100%)",
@@ -70,7 +115,6 @@ const config: Config = {
           "linear-gradient(180deg, rgba(244,244,244,0.9) 0%, rgba(255,255,255,0.95) 100%)",
       },
 
-      /* ---------- Radii ---------- */
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
@@ -105,7 +149,12 @@ const config: Config = {
     },
   },
 
-  plugins: [require("tailwindcss-animate")],
+  /* ---------------------------------------------------------------------- */
+  /*  Plugins                                                                */
+  /* ---------------------------------------------------------------------- */
+  plugins: [
+    require("tailwindcss-animate"), // ShadCN motion helpers
+  ],
 };
 
 export default config;
