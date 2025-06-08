@@ -13,7 +13,7 @@ import NotFound from "./pages/NotFound";
 const queryClient = new QueryClient();
 
 // For GitHub Pages, we need the correct base path
-const basename = import.meta.env.PROD ? '/prestigeracingusa' : undefined;
+const basename = import.meta.env.BASE_URL !== '/' ? import.meta.env.BASE_URL.replace(/\/$/, '') : undefined;
 
 console.log('App loading, basename:', basename);
 console.log('Environment:', import.meta.env.MODE);
