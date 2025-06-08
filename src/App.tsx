@@ -12,15 +12,12 @@ import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
 
-// Only use basename in production builds for GitHub Pages
-const basename = import.meta.env.MODE === 'production' ? '/prestigeracingusa' : undefined;
-
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <BrowserRouter basename={basename}>
+      <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/parts" element={<Parts />} />
