@@ -23,12 +23,19 @@ const Contact = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+
+    // Build a URL-encoded payload (allowed in no-cors mode)
+    const formBody = new URLSearchParams();
+    formBody.append('name', formData.name);
+    formBody.append('email', formData.email);
+    formBody.append('message', formData.message);
+
     try {
       await fetch(GOOGLE_SCRIPT_URL, {
         method: 'POST',
         mode: 'no-cors',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(formData),
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: formBody.toString(),
       });
       alert('✅ Message sent!');
       setFormData({ name: '', email: '', message: '' });
@@ -127,7 +134,6 @@ const Contact = () => {
                       <p className="font-inter text-secondary">info@prestigeracingusa.com</p>
                     </div>
                   </div>
-                  
                   
                   <div className="flex items-start space-x-4">
                     <div className="flex-shrink-0">
