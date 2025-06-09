@@ -1,10 +1,11 @@
-
 import React, { useState } from 'react';
 import Navigation from '@/components/Navigation';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Phone, Mail, Clock } from 'lucide-react';
+
+const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbychfzEa2JD0z35zzGtcYF-iX3zHkAGijWG8CYqgR1tNsmdyIGI2DuvN3o2hpdAtFEE/exec';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -20,10 +21,21 @@ const Contact = () => {
     });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
-    // Handle form submission logic here
+    try {
+      await fetch(GOOGLE_SCRIPT_URL, {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
+      });
+      alert('✅ Message sent!');
+      setFormData({ name: '', email: '', message: '' });
+    } catch (err) {
+      console.error(err);
+      alert('❌ Could not send message');
+    }
   };
 
   return (
@@ -133,7 +145,7 @@ const Contact = () => {
               </div>
             </div>
 
-            {/* Shop Image - Now positioned to show more of the image */}
+            {/* Shop Image */}
             <div className="animate-fade-in">
               <img 
                 src="/lovable-uploads/8bb860c1-fee1-4b2f-8ef3-d91ce5f48ad5.png"
