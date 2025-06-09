@@ -5,7 +5,7 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Phone, Mail, Clock } from 'lucide-react';
 
-const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbychfzEa2JD0z35zzGtcYF-iX3zHkAGijWG8CYqgR1tNsmdyIGI2DuvN3o2hpdAtFEE/exec';
+const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyKJ5VwUw5RODbQU9e9E0yZIIFVhuNFUT1CxYbt0K1zQAI4bYu5vyR6tivqc3O49w8D/exec';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
