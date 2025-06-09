@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 
 const Navigation = () => {
+  console.log('Navigation component rendering');
   const [isOpen, setIsOpen] = useState(false);
 
   const navItems = [
@@ -23,6 +24,10 @@ const Navigation = () => {
               src="/lovable-uploads/7399e8f5-02fc-4252-ab2f-2ca362decea4.png" 
               alt="Prestige Racing USA" 
               className="h-10 w-auto"
+              onError={(e) => {
+                console.error('Logo failed to load:', e);
+                e.currentTarget.style.display = 'none';
+              }}
             />
           </Link>
 
@@ -32,10 +37,10 @@ const Navigation = () => {
               <Link
                 key={item.name}
                 to={item.href}
-                className="font-inter font-medium text-primary hover:text-accent transition-colors duration-200 relative group"
+                className="font-inter font-medium text-blue-900 hover:text-red-600 transition-colors duration-200 relative group"
               >
                 {item.name}
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-accent transition-all duration-200 group-hover:w-full"></span>
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-red-600 transition-all duration-200 group-hover:w-full"></span>
               </Link>
             ))}
           </div>
@@ -44,7 +49,7 @@ const Navigation = () => {
           <div className="md:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="text-primary hover:text-accent transition-colors duration-200"
+              className="text-blue-900 hover:text-red-600 transition-colors duration-200"
             >
               {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </button>
@@ -59,7 +64,7 @@ const Navigation = () => {
                 <Link
                   key={item.name}
                   to={item.href}
-                  className="block px-3 py-2 font-inter font-medium text-primary hover:text-accent hover:bg-muted transition-colors duration-200"
+                  className="block px-3 py-2 font-inter font-medium text-blue-900 hover:text-red-600 hover:bg-gray-100 transition-colors duration-200"
                   onClick={() => setIsOpen(false)}
                 >
                   {item.name}

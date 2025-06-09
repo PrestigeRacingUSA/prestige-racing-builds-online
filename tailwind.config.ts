@@ -10,6 +10,17 @@ export default {
 		"./src/**/*.{ts,tsx}",
 	],
 	prefix: "",
+	safelist: [
+		'text-primary',
+		'bg-primary',
+		'text-accent',
+		'bg-accent',
+		'text-blue-900',
+		'text-red-600',
+		'bg-red-600',
+		'hover:text-red-600',
+		'bg-slate-800'
+	],
 	theme: {
 		container: {
 			center: true,
