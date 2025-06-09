@@ -19,7 +19,15 @@ export default {
 		'text-red-600',
 		'bg-red-600',
 		'hover:text-red-600',
-		'bg-slate-800'
+		'bg-slate-800',
+		'text-white',
+		'bg-white',
+		'bg-muted',
+		'text-secondary',
+		'bg-accent-hover',
+		'animate-fade-in',
+		'animate-slide-in',
+		'animate-bounce'
 	],
 	theme: {
 		container: {
