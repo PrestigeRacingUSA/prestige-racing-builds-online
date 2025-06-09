@@ -13,17 +13,17 @@ const Navigation = () => {
     { name: 'Contact', href: '/contact' },
   ];
 
-  console.log('Navigation component rendering');
-
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link to="/" className="flex items-center">
-            <div className="h-10 w-auto bg-primary text-white px-4 py-2 rounded font-bold">
-              Prestige Racing USA
-            </div>
+            <img 
+              src="/lovable-uploads/7399e8f5-02fc-4252-ab2f-2ca362decea4.png" 
+              alt="Prestige Racing USA" 
+              className="h-10 w-auto"
+            />
           </Link>
 
           {/* Desktop Navigation */}
