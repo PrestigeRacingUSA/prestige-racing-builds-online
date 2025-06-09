@@ -116,15 +116,6 @@ const Contact = () => {
                     </div>
                   </div>
                   
-                  <div className="flex items-start space-x-4">
-                    <div className="flex-shrink-0">
-                      <Phone className="w-6 h-6 text-accent mt-1" />
-                    </div>
-                    <div>
-                      <h3 className="font-inter font-medium text-primary">Phone</h3>
-                      <p className="font-inter text-secondary">(555) 123-4567</p>
-                    </div>
-                  </div>
                   
                   <div className="flex items-start space-x-4">
                     <div className="flex-shrink-0">
