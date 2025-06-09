@@ -2,15 +2,12 @@
 import React from 'react';
 
 const HeroSection = () => {
+  console.log('HeroSection rendering');
+  
   return (
     <section className="relative h-screen flex items-center justify-center overflow-hidden">
-      {/* Background Image */}
-      <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{
-          backgroundImage: `url('/lovable-uploads/e372497e-d969-4393-93e3-061675d9c6bd.png')`
-        }}
-      />
+      {/* Solid background instead of image for now */}
+      <div className="absolute inset-0 bg-primary" />
       
       {/* Overlay */}
       <div className="absolute inset-0 bg-hero-gradient" />

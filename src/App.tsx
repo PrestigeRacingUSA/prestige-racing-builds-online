@@ -12,18 +12,15 @@ import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
 
-// Simplified basename logic
-const basename = import.meta.env.MODE === 'production' ? '/prestigeracingusa' : undefined;
-
-console.log('App loading with:', {
-  basename,
-  mode: import.meta.env.MODE,
-  baseUrl: import.meta.env.BASE_URL,
-  prod: import.meta.env.PROD
-});
+const basename = import.meta.env.PROD ? '/prestigeracingusa' : undefined;
 
 const App = () => {
-  console.log('App component rendering');
+  console.log('App rendering with basename:', basename);
+  console.log('Environment:', {
+    MODE: import.meta.env.MODE,
+    PROD: import.meta.env.PROD,
+    BASE_URL: import.meta.env.BASE_URL
+  });
   
   return (
     <QueryClientProvider client={queryClient}>
